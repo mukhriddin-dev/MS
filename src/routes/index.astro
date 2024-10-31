@@ -1,0 +1,76 @@
+---
+import { t } from 'i18n:astro'
+import { URL } from '@data/constants'
+import Layout from '@layouts/Layout.astro'
+import Hero from '@pages/_home/Hero.astro'
+import OpenGraph from '@components/OpenGraph.astro'
+
+const options = {
+  title: 'Googel',
+  description: 'Googel',
+  metaRobots: 'Googel'
+}
+---
+
+<Layout options={options}>
+  <OpenGraph information={options} image=`${URL}/og/unicorn-sparkle-og.png` />
+
+  <main>
+    <Hero />
+    <!-- <Experience />
+    <Projects />
+    <Contributions />
+    <About />
+    <Contact /> -->
+  </main>
+</Layout>
+
+<style>
+  main {
+    max-width: 1054px;
+    margin-inline: auto;
+    padding-inline: var(--mobile-inline-padding);
+
+    @media (width >= 1200px) {
+      padding-inline: 0;
+    }
+  }
+</style>
+
+<script>
+  let wn = window as any
+  wn.replainSettings = { id: '7528c598-00f0-4e48-a673-d81107f6cb22' }
+  ;(function (u) {
+    var s = document.createElement('script')
+    s.async = true
+    s.src = u
+    var x = document.getElementsByTagName('script')[0] as any
+    x.parentNode.insertBefore(s, x)
+  })('https://widget.replain.cc/dist/client.js')
+</script>
+
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {}
+  _smartsupp.key = '2a448dacc4d3590b8f3c0aedd7ae876ff0323928'
+  window.smartsupp ||
+    (function (d) {
+      var s,
+        c,
+        o = (smartsupp = function () {
+          o._.push(arguments)
+        })
+      o._ = []
+      s = d.getElementsByTagName('script')[0]
+      c = d.createElement('script')
+      c.type = 'text/javascript'
+      c.charset = 'utf-8'
+      c.async = true
+      c.src = 'https://www.smartsuppchat.com/loader.js?'
+      s.parentNode.insertBefore(c, s)
+    })(document)
+</script>
+<noscript>
+  Powered by <a href="“https://www.smartsupp.com”" target="“_blank”"
+    >Smartsupp</a
+  ></noscript
+>
